@@ -3,7 +3,7 @@ package com.sparta.myselectshop.scheduler;
 import com.sparta.myselectshop.entity.Product;
 import com.sparta.myselectshop.naver.dto.ItemDto;
 import com.sparta.myselectshop.naver.service.NaverApiService;
-import com.sparta.myselectshop.naver.service.ProductService;
+import com.sparta.myselectshop.service.ProductService;
 import com.sparta.myselectshop.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

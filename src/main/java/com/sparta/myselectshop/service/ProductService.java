@@ -1,4 +1,4 @@
-package com.sparta.myselectshop.naver.service;
+package com.sparta.myselectshop.service;
 
 import com.sparta.myselectshop.dto.ProductMypriceRequestDto;
 import com.sparta.myselectshop.dto.ProductRequestDto;
@@ -88,9 +88,9 @@ public class ProductService {
                 () -> new NullPointerException("해당 폴더가 존재하지 않습니다.")
         );
 
-        if (product.getUser().getId().equals(user.getId())
+        if (!product.getUser().getId().equals(user.getId())
             || !folder.getUser().getId().equals(user.getId())) {
-            throw new IllegalArgumentException("회원님의 관심상품이 아니거나, 회원님의 폴더가 아닙니다.");
+                throw new IllegalArgumentException("회원님의 관심상품이 아니거나, 회원님의 폴더가 아닙니다.");
         }
 
         Optional<ProductFolder> overLapFolder = productFolderRepository.findByProductAndFolder(product, folder);
